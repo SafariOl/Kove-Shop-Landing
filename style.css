@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: m;
+    src: url('./font/MargarethRosinante-Regular.otf');
+}
+
+body{
+    font-family: m;
+    overflow-x: hidden;
+}
+
+.container{
+    display: flex;
+}
+
+section{
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
+.sec-1{
+    display: flex;
+}
+
+.box-1{
+    width: 65%;
+    display: grid;
+    place-items: center;
+    font-size: 90px;
+}
+
+.box-2{
+    width: 35%;
+}
+
+.image-gallery{
+    display: flex;
+    background-color: #060606;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+}
+
+.col-2{
+    margin-top: -250px;
+}
+
+.col img{
+    background-color: #060606;
+    width: 200px;
+    min-height: 300px;
+    object-fit: cover;
+    padding: 5px;
+}
+
+.sec-2{
+    overflow-y: hidden;
+}
+
+.sec-2-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left{
+    margin: 0 1% 0 6%;
+    width: 65%;
+}
+
+.left-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left img{
+    min-width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.right{
+    width: 35%;
+    background-color: #060606;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.right img{
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.sec-3{
+    background-color: #060606;
+    position: relative;
+    z-index: 111;
+}
+
+.left-main{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.loop{
+    cursor: pointer;
+    height: 30px;
+    width: 120px;
+    white-space: nowrap;
+    font-size: 12px;
+    overflow: hidden;
+    background-color: transparent;
+    border: 1px solid #252525;
+    position: absolute;
+    top: 78%;
+    left: 95%;
+    transform: translate(-95%, -50%);
+}
+
+.loop span{
+    animation: loop 8s infinite linear;
+    display: inline-block;
+    padding-left: 110%;
+}
+
+.loop2 span{
+    animation-delay: 4s;
+}
+
+@keyframes loop {
+    0%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(-100%, 0);
+    }
+}
+
+.left-main p{
+    font-size: 50px;
+}
+
+.left-head h1{
+    font-size: 70px;
+}
+
+.right p{
+    padding: 10px 0;
+    font-size: 90px;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    animation: loop2 10s infinite linear;
+    padding-left: 100%;
+}
+
+@keyframes loop2 {
+    0%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(-300%, 0);
+    }
+}
+
+.sec-3{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 200px;
+    flex-wrap: nowrap;
+    text-align: center;
+    overflow: hidden;
+}
+
+.sec-3 div{
+    white-space: nowrap;
+}
+
+.row2{
+    background-color: #fff;
+    color: #060606;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.side-bar{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: 100%;
+    width: 95px;
+    padding: 15px 0 30px;
+    left: 0;
+}
+
+.side-bar div{
+    transform: rotate(-90deg);
+}
+
+.decs{
+    font-size: 12px;
+    width: 200px;
+    margin-bottom: 60px;
+}
